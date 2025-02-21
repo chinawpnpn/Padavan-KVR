@@ -25,8 +25,8 @@ jobs:
       env:
         KERNEL: 3.4
       run: |
-        git clone --depth=1 https://github.com/chinawpnpn/Padavan-KVR.git /Padavan-KVR
-        cd /Padavan-KVR/toolchain-mipsel
+        git clone --depth=1 https://github.com/chinawpnpn/Padavan-KVR.git /
+        cd /toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
     - name: Build Firmware
