@@ -25,8 +25,8 @@ jobs:
       env:
         KERNEL: 3.4
       run: |
-        git clone --depth=1 https://github.com/fightroad/Padavan-KVR.git /opt/rt-n56u
-        cd /opt/rt-n56u/toolchain-mipsel
+        git clone --depth=1 https://github.com/chinawpnpn/Padavan-KVR.git /Padavan-KVR
+        cd /Padavan-KVR/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
     - name: Build Firmware
@@ -34,7 +34,7 @@ jobs:
         TNAME: D21
         KERNEL: 3.4
       run: |
-        cd /opt/rt-n56u/trunk
+        cd /Padavan-KVR/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
         exit 1
